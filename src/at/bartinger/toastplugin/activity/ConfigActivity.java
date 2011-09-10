@@ -33,7 +33,10 @@ public class ConfigActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				String data = text.getText().toString();
-				SmartPhonePluginHelper.setResultAndFinish(ConfigActivity.this, data);
+				SmartPhonePluginHelper.setResultAndFinish(ConfigActivity.this,
+						"Toast Message",//Title: displayed in the list
+						"Will display: " + data,//Info: displayed under the title
+						data);//The actual data
 			}
 		});
 		
