@@ -1,22 +1,22 @@
 package at.bartinger.toastplugin.activity;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import at.bartinger.toastplugin.SmartPhonePluginHelper;
 import at.bartinger.toastplugin.R;
-import at.bartinger.toastplugin.R.id;
-import at.bartinger.toastplugin.R.layout;
 
 public class ConfigActivity extends Activity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.main);
+		getWindow().setLayout(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
 
 		final EditText text = (EditText) findViewById(R.id.edittext);
 		Button ok = (Button) findViewById(R.id.button_ok);
@@ -26,7 +26,7 @@ public class ConfigActivity extends Activity{
 		String data = SmartPhonePluginHelper.getData(this);
 		if(!data.equals(""))
 			text.setText(data);
-
+		
 
 		ok.setOnClickListener(new View.OnClickListener() {
 
