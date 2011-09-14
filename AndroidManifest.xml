@@ -18,13 +18,13 @@
 			</intent-filter>
 		</activity>
 
-		<service
-			android:name=".PluginService">
+		<receiver
+			android:name=".PluginReceiver">
 			<intent-filter>
 				<action
 					android:name="at.bartinger.toastplugin.ACTION_SERVICE" />
 			</intent-filter>
-		</service>
+		</receiver>
 
 	</application>
 	<uses-sdk
