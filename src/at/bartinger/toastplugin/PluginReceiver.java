@@ -29,7 +29,7 @@ public class PluginReceiver extends BroadcastReceiver{
 			handler.post(new Runnable() {
 
 				public void run() {
-					Toast.makeText(context, data + " Is toggleBack: " + toggleBack, Toast.LENGTH_LONG).show();
+					Toast.makeText(context, data, Toast.LENGTH_LONG).show();
 				}
 			});
 			/*********************/
